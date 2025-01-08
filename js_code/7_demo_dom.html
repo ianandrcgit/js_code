@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Color</title>
+</head>
+<body>
+
+    <!-- Step 1: Create a button element -->
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+    <script>
+        // Step 2: Write a function that generates a random color and changes the background
+        function getRandomColor() {
+            // Generate a random hex color
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            return randomColor;
+        }
+
+        function changeBackgroundColor() {
+            // Change the background color of the webpage to a random color
+            document.body.style.backgroundColor = getRandomColor();
+        }
+    </script>
+
+</body>
+</html>
